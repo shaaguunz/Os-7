@@ -10,7 +10,8 @@ int tid = *((int* )i);  // thread id
 allocate_map();
 pid = allocate_pid();
 if(pid==-1){
-printf("no pid available\n");
+pid= allocate_pid(); // if pid is not aviable check again
+
 }
 else{
 printf("thread  %d  allocated pid is %ld\n",tid,pid);
