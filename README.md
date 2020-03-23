@@ -1,6 +1,7 @@
 # Os-7
 assignment for the OS subject for 4 th sem 
 qn
+
 . Create a Process Id (PID) manager that keeps track of free PIDs and ensures that no two
 active processes are having the same pid. Once a process terminates the PID manager may
 assigns its pid to new process.
@@ -22,3 +23,7 @@ will create a number of threads—for example, 100—and each thread will reques
 for a random period of time, and then release the pid. (Sleeping for a random period of time
 approximates the typical pid usage in which a pid is assigned to a new process, the process
 executes and then terminates, and the pid is released on the process’s termination.) 
+
+
+to run 
+gcc cacoed.c -o cacoed -pthread
