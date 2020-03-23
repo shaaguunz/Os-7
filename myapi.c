@@ -1,30 +1,30 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
+
 #define MAX_PID 1000
 #define MIN_PID 100
-#define limit MAX_PID-MIN_PID
-int  allocate[limit];
-int allocate_map(void){
+
+int  allocate[900];
+int allocate_map(){
 int a;
-for(a=0;a<limit;a++){      //initializing  pid's
+for(a=MIN_PID;a<MAX_PID;a++){      //initializing  pid's
 allocate[a]==0;}
-return 0;
+return 1;  //1 if successfull -1 if unsuccessfull
 }
-int allocate_pid(void){
+int allocate_pid(){
 int a;
-for(a=0;a<limit;a++){
+for(a=MIN_PID;a<MAX_PID;a++){
 if(allocate[a]==0){
 allocate[a]=1;
-return a+100;    // pid min =100 so everything will be above 100
+return a;    // pid min =100 so everything will be above 100
 }
 }
-return 1;   //-1 if wrong and 1 if all is right
+return (-1);   //-1 if wrong and 1 if all is right
 }
 void release_pid(int pid){
-int pid_n = pid-100;
-allocate[pid]=0;                                                                                                                                                                                                                             }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
-
+allocate[pid]=0;
+}
 
 
 
