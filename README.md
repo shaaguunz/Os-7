@@ -26,4 +26,4 @@ executes and then terminates, and the pid is released on the process’s termina
 
 
 to run 
-gcc cacoed.c -o cacoed -pthread
+gcc testing.c -o cacoed -pthread
